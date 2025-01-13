@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -36,11 +35,9 @@
     .section-title h2 {
       font-size: 2.5rem;
     }
-
     .section-title p {
       font-size: 1.125rem;
     }
-
     @media (max-width: 767.98px) {
       .section-title h2 {
         font-size: 2rem;
@@ -60,18 +57,15 @@
     .about {
       padding: 60px 0;
     }
-
     .about .about-img {
       overflow: hidden;
       border-radius: 12px;
     }
-
     .about .about-img img {
       width: 100%;
       height: auto;
       object-fit: cover;
     }
-
     .about .content {
       background: #fff;
       border-radius: 12px;
@@ -80,8 +74,6 @@
       overflow: auto;
       max-height: 400px;
     }
-
-    /* Ensure content padding on mobile */
     @media (max-width: 767.98px) {
       .about .content {
         max-height: none;
@@ -89,12 +81,77 @@
       }
     }
 
+    /* Timeline Styles */
+    .timeline {
+      position: relative;
+      max-width: 100%;
+      margin: 50px 0;
+    }
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      background-color: #007BFF;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -3px;
+    }
+    .timeline-item {
+      padding: 20px 30px;
+      position: relative;
+      background-color: inherit;
+      width: 50%;
+    }
+    .timeline-item::after {
+      content: "";
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      right: -13px;
+      background-color: white;
+      border: 4px solid #007BFF;
+      top: 15px;
+      border-radius: 50%;
+      z-index: 1;
+    }
+    .timeline-item.left {
+      left: 0;
+    }
+    .timeline-item.right {
+      left: 50%;
+    }
+    .timeline-item.right::after {
+      left: -13px;
+    }
+    .timeline-item h3 {
+      font-size: 1.25rem;
+      margin-bottom: 5px;
+    }
+    .timeline-item p {
+      font-size: 0.95rem;
+      margin-bottom: 0;
+    }
+    @media screen and (max-width: 768px) {
+      .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+      }
+      .timeline-item::after {
+        left: 60px;
+      }
+      .timeline::after {
+        left: 60px;
+      }
+      .timeline-item.right { left: 0%; }
+    }
+
     /* Enhanced Contact Section Styles */
     .section-bg {
       background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
       padding: 60px 0;
     }
-
     .contact {
       background-color: #fff;
       border-radius: 12px;
@@ -104,22 +161,18 @@
       box-sizing: border-box;
       transition: transform 0.3s ease;
     }
-
     .contact:hover {
       transform: translateY(-5px);
     }
-
     .contact__form-field {
       margin-bottom: 20px;
     }
-
     .contact__form-field label {
       display: block;
       margin-bottom: 8px;
       font-weight: 600;
       color: #333;
     }
-
     .contact__form-field input,
     .contact__form-field textarea {
       width: 100%;
@@ -131,14 +184,12 @@
       font-size: 16px;
       color: #333;
     }
-
     .contact__form-field input:focus,
     .contact__form-field textarea:focus {
       border-color: #007BFF;
       box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
       outline: none;
     }
-
     .btn.contact__btn {
       width: 100%;
       padding: 14px;
@@ -151,7 +202,6 @@
       cursor: pointer;
       transition: background-color 0.3s ease, transform 0.3s ease;
     }
-
     .btn.contact__btn:hover {
       background-color: #0056b3;
       transform: translateY(-2px);
@@ -162,16 +212,25 @@
       border-radius: 6px;
       transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
     }
-
     .btn-outline-primary:hover {
       background-color: #007BFF;
       color: #fff;
       transform: translateY(-2px);
     }
-
-    /* Improve spacing for posts/articles on small screens */
     .post {
       margin-bottom: 1.5rem;
+    }
+
+    /* Search/Filter Input Styles */
+    .filter-controls {
+      margin-bottom: 20px;
+    }
+    .filter-controls input, .filter-controls select {
+      padding: 10px;
+      margin-right: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 1rem;
     }
   </style>
 </head>
@@ -218,63 +277,63 @@
 
   <main id="main">
 
-  <!-- ======= About Section ======= -->
-  <section id="about" class="about">
-    <div class="container" data-aos="fade-up">
-      <div class="section-title text-center">
-        <h2>About</h2>
-        <p>I received a B.Sc. degree in Electrical Engineering from Iran University of Science and Technology and completed my Master of Science in Telecommunication Systems at the University of Tehran in September 2024. I currently work as a research assistant at the Computation and Communication lab at the University of Tehran and as an AI developer at AVIR AI Center. My fields of interest include Machine Learning, Deep Learning, Signal Processing, and related areas. It is always my pleasure to discuss topics related to research. Feel free to email me! <a href="assets/ARH_CV.pdf">[My CV]</a></p>
-      </div>
-      <div class="row">
-        <div class="col-md-5">
-          <!-- Responsive About Image -->
-          <div class="about-img mb-4 mb-md-0">
-            <img src="assets/img/arh2.jpg" class="img-fluid" alt="Alireza Hosseini">
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title text-center">
+          <h2>About</h2>
+          <p>I received a B.Sc. degree in Electrical Engineering from Iran University of Science and Technology and completed my Master of Science in Telecommunication Systems at the University of Tehran in September 2024. I currently work as a research assistant at the Computation and Communication lab at the University of Tehran and as an AI developer at AVIR AI Center. My fields of interest include Machine Learning, Deep Learning, Signal Processing, and related areas. It is always my pleasure to discuss topics related to research. Feel free to email me! <a href="assets/ARH_CV.pdf">[My CV]</a></p>
+        </div>
+        <div class="row">
+          <div class="col-md-5">
+            <!-- Responsive About Image -->
+            <div class="about-img mb-4 mb-md-0">
+              <img src="assets/img/arh2.jpg" class="img-fluid" alt="Alireza Hosseini">
+            </div>
+          </div>
+          <div class="col-md-7">
+            <!-- Education and Experience content in a scrollable box -->
+            <div class="content" style="max-height: 400px;">
+              <h3>Education</h3>
+              <hr>
+              <div class="row">
+                <div class="col-8">
+                  <ul>
+                    <li><i class="bi bi-chevron-right"></i><b>Master's in Telecommunication Systems</b>, University of Tehran</li>
+                    <li><i class="bi bi-chevron-right"></i><b>Bachelor's in Electrical Engineering</b>, Iran University of Science and Technology</li>
+                  </ul>
+                </div>
+                <div class="col-4">
+                  <ul>
+                    <li>Sep. 2022 - Sep. 2024</li>
+                    <li>Sep. 2017 - Mar. 2022</li>
+                  </ul>
+                </div>
+              </div>
+              <h3>Experience</h3>
+              <hr>
+              <div class="row">
+                <div class="col-8">
+                  <ul>
+                    <li><i class="bi bi-chevron-right"></i><b>AI Developer</b>, <a href="https://avir.co.com/">AVIR AI Center</a>, Tehran, Iran</li>
+                    <li><i class="bi bi-chevron-right"></i><b>AI Developer</b>, University of Tehran</li>
+                    <li><i class="bi bi-chevron-right"></i><b>AI Developer</b>, Irankhodro Powertrain Co, Tehran, Iran</li>
+                  </ul>
+                </div>
+                <div class="col-4">
+                  <ul>
+                    <li>Jul. 2022 - Present</li>
+                    <li>Jan. 2023 - Nov. 2023</li>
+                    <li>Jul. 2021 - Jul. 2022</li>
+                  </ul>
+                </div>
+              </div>
+            </div><!-- End content box -->
           </div>
         </div>
-        <div class="col-md-7">
-          <!-- Education and Experience content in a scrollable box -->
-          <div class="content" style="max-height: 400px;">
-            <h3>Education</h3>
-            <hr>
-            <div class="row">
-              <div class="col-8">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i><b>Master's in Telecommunication Systems</b>, University of Tehran</li>
-                  <li><i class="bi bi-chevron-right"></i><b>Bachelor's in Electrical Engineering</b>, Iran University of Science and Technology</li>
-                </ul>
-              </div>
-              <div class="col-4">
-                <ul>
-                  <li>Sep. 2022 - Sep. 2024</li>
-                  <li>Sep. 2017 - Mar. 2022</li>
-                </ul>
-              </div>
-            </div>
-            <h3>Experience</h3>
-            <hr>
-            <div class="row">
-              <div class="col-8">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i><b>AI Developer</b>, <a href="https://avir.co.com/">AVIR AI Center</a>, Tehran, Iran</li>
-                  <li><i class="bi bi-chevron-right"></i><b>AI Developer</b>, University of Tehran</li>
-                  <li><i class="bi bi-chevron-right"></i><b>AI Developer</b>, Irankhodro Powertrain Co, Tehran, Iran</li>
-                </ul>
-              </div>
-              <div class="col-4">
-                <ul>
-                  <li>Jul. 2022 - Present</li>
-                  <li>Jan. 2023 - Nov. 2023</li>
-                  <li>Jul. 2021 - Jul. 2022</li>
-                </ul>
-              </div>
-            </div>
-          </div><!-- End content box -->
-        </div>
       </div>
-    </div>
-  </section>
-  <!-- End About Section -->
+    </section>
+    <!-- End About Section -->
 
     <!-- ======= Publications Section ======= -->
     <section id="resume" class="resume">
@@ -282,8 +341,18 @@
         <div class="section-title">
           <h2>Publications</h2>
         </div>
+        <!-- Search and Filter Controls for Publications -->
+        <div class="filter-controls text-center">
+          <input type="text" id="pub-search" placeholder="Search Publications...">
+          <select id="pub-filter">
+            <option value="all">All</option>
+            <option value="conference">Conference</option>
+            <option value="journal">Journal</option>
+            <option value="arxiv">Arxiv</option>
+          </select>
+        </div>
         <!-- Article -7 -->
-        <article class="post post-item">
+        <article class="post post-item" data-keywords="conference wacv SUM">
           <ul style="list-style-type: disc; margin-bottom: 3px; padding-left: 0;">
             <li style="font-size: 16px;"><b>SUM: Saliency Unification through Mamba for Visual Attention Modeling</b></li>
           </ul>
@@ -297,7 +366,7 @@
         </article>
         <br>
         <!-- Article -6 -->
-        <article class="post post-item">
+        <article class="post post-item" data-keywords="arxiv preprint BrandVisibility">
           <ul style="list-style-type: disc; margin-bottom: 3px; padding-left: 0;">
             <li style="font-size: 16px;"><b>Brand Visibility in Packaging: A Deep Learning Approach for Logo Detection, Saliency-Map Prediction, and Logo Placement Analysis</b></li>
           </ul>
@@ -311,7 +380,7 @@
         </article>
         <br>
         <!-- Article -5 -->
-        <article class="post post-item">
+        <article class="post post-item" data-keywords="conference wacv INCODE">
           <ul style="list-style-type: disc; margin-bottom: 3px; padding-left: 0;">
             <li style="font-size: 16px;"><b>INCODE: Implicit Neural Conditioning with Prior Knowledge Embeddings</b></li>
           </ul>
@@ -326,7 +395,7 @@
         </article>
         <br>
         <!-- Article -4 -->
-        <article class="post post-item">
+        <article class="post post-item" data-keywords="conference ICWR HybridRAG">
           <ul style="list-style-type: disc; margin-bottom: 3px; padding-left: 0;">
             <li style="font-size: 16px;"><b>Hybrid Retrieval-Augmented Generation Approach for LLMs Query Response Enhancement</b></li>
           </ul>
@@ -338,7 +407,7 @@
         </article>
         <br>
         <!-- Article -3 -->
-        <article class="post post-item">
+        <article class="post post-item" data-keywords="conference ICWR CAPTCHA">
           <ul style="list-style-type: disc; margin-bottom: 3px; padding-left: 0;">
             <li style="font-size: 16px;"><b>Farsi CAPTCHA Recognition Using Attention-Based Convolutional Neural Network</b></li>
           </ul>
@@ -349,9 +418,8 @@
           </div>
         </article>
         <br>
-        <!-- The remaining articles (Articles -2 and -1) are hidden by default -->
-        <!-- Article -2 -->
-        <article class="post post-item d-none">
+        <!-- Articles -2 and -1 (hidden by default) -->
+        <article class="post post-item d-none" data-keywords="journal Automotive">
           <ul style="list-style-type: disc; margin-bottom: 3px; padding-left: 0;">
             <li style="font-size: 16px;"><b>Machine vision–based measurement approach for engine accessory belt transverse vibration based on deep learning method</b></li>
           </ul>
@@ -362,8 +430,7 @@
           </div>
         </article>
         <br>
-        <!-- Article -1 -->
-        <article class="post post-item d-none">
+        <article class="post post-item d-none" data-keywords="journal EngineResearch">
           <ul style="list-style-type: disc; margin-bottom: 3px; padding-left: 0;">
             <li style="font-size: 16px;"><b>Development of Machine Vision System to Track Movement of an Engine Timing Belt Tensioner Based on Deep Neural Network</b></li>
           </ul>
@@ -386,175 +453,184 @@
         <div class="section-title">
           <h2>Projects</h2>
         </div>
+        <!-- Search and Filter Controls for Projects -->
+        <div class="filter-controls text-center">
+          <input type="text" id="proj-search" placeholder="Search Projects...">
+          <select id="proj-filter">
+            <option value="all">All</option>
+            <option value="Avir">Avir</option>
+            <option value="University">University</option>
+          </select>
+        </div>
         <div class="row" id="project-grid">
           <!-- Project 1 -->
-          <div class="col-md-6 col-lg-4 mb-4 project-item" data-aos="fade-up">
+          <div class="col-md-6 col-lg-4 mb-4 project-item" data-keywords="Avir NVILA DocumentQuery">
             <div class="card h-100">
               <div class="card-body">
                 <h5 class="card-title"><b>Document Query using Fine-Tuned Quantized NVILA Model</b></h5>
                 <p class="card-text"><small class="text-muted"><b>Dec 2024 - Jan 2025</b></small></p>
                 <p class="card-text"><strong>Adak Vira Iranian Rahjoo (Avir)</strong></p>
-                <p class="card-text">Designed and implemented a system for precise information extraction from documents by fine-tuning and quantizing the NVILA vision-language model (using LLM-AWQ). This solution converts user queries into JSON outputs with high accuracy, enabling seamless document parsing, efficient data retrieval, and scalable performance for large datasets.</p>
+                <p class="card-text">Designed and implemented a system for precise information extraction from documents by fine-tuning and quantizing the NVILA vision-language model (using LLM-AWQ). This solution converts user queries into JSON outputs with high accuracy.</p>
               </div>
             </div>
           </div>
           <!-- Project 2 -->
-          <div class="col-md-6 col-lg-4 mb-4 project-item" data-aos="fade-up">
+          <div class="col-md-6 col-lg-4 mb-4 project-item" data-keywords="Avir SQL Query">
             <div class="card h-100">
               <div class="card-body">
                 <h5 class="card-title"><b>AI-Powered Natural Language to SQL Query System</b></h5>
                 <p class="card-text"><small class="text-muted"><b>Oct 2024 - Dec 2024</b></small></p>
                 <p class="card-text"><strong>Adak Vira Iranian Rahjoo (Avir)</strong></p>
-                <p class="card-text">Designed and implemented a complete end-to-end solution for seamless database interaction by integrating Large Language Models (LLMs). Developed capabilities for natural language to SQL conversion, automated data interpretation, and dynamic visualization, ensuring intuitive and user-friendly access to database insights.</p>
+                <p class="card-text">Developed an end-to-end solution for seamless database interaction using LLMs to convert natural language into SQL queries.</p>
               </div>
             </div>
           </div>
           <!-- Project 3 -->
-          <div class="col-md-6 col-lg-4 mb-4 project-item" data-aos="fade-up">
+          <div class="col-md-6 col-lg-4 mb-4 project-item" data-keywords="Avir Diffusion Logo">
             <div class="card h-100">
               <div class="card-body">
                 <h5 class="card-title"><b>Logo Generation using Diffusion Models</b></h5>
                 <p class="card-text"><small class="text-muted"><b>Aug 2024 - Dec 2024</b></small></p>
                 <p class="card-text"><strong>Adak Vira Iranian Rahjoo (Avir)</strong></p>
-                <p class="card-text">Fine-tuned a diffusion model and applied prompt engineering to generate logos based on company descriptions, styles, and colors.</p>
+                <p class="card-text">Utilized diffusion models with prompt engineering to generate logos from company descriptions, styles, and colors.</p>
               </div>
             </div>
           </div>
           <!-- Project 4 -->
-          <div class="col-md-6 col-lg-4 mb-4 project-item" data-aos="fade-up">
+          <div class="col-md-6 col-lg-4 mb-4 project-item" data-keywords="Avir EyeTracking Smart-EYE">
             <div class="card h-100">
               <div class="card-body">
                 <h5 class="card-title"><b>Smart-EYE for Ads: AI for Eye Tracking and Brand Attention</b></h5>
                 <p class="card-text"><small class="text-muted"><b>Jan 2023 - Nov 2024</b></small></p>
                 <p class="card-text"><strong>Adak Vira Iranian Rahjoo (Avir)</strong></p>
-                <p class="card-text">Developed AI engines for eye tracking, saliency prediction, brand attention detection, and video advertisement complexity analysis.</p>
+                <p class="card-text">Developed AI engines for eye tracking, saliency prediction, and brand attention detection for video advertisement analysis.</p>
               </div>
             </div>
           </div>
           <!-- Project 5 -->
-          <div class="col-md-6 col-lg-4 mb-4 project-item" data-aos="fade-up">
+          <div class="col-md-6 col-lg-4 mb-4 project-item" data-keywords="Avir XLSTM Timeseries">
             <div class="card h-100">
               <div class="card-body">
                 <h5 class="card-title"><b>Time Series Prediction using Modified XLSTM</b></h5>
                 <p class="card-text"><small class="text-muted"><b>Sep 2024 - Oct 2024</b></small></p>
                 <p class="card-text"><strong>Adak Vira Iranian Rahjoo (Avir)</strong></p>
-                <p class="card-text">Used and modified XLSTM models to predict future data points and trends for the next 7 days in a time series dataset.</p>
+                <p class="card-text">Modified XLSTM models to predict data points and trends over the next 7 days.</p>
               </div>
             </div>
           </div>
           <!-- Project 6 -->
-          <div class="col-md-6 col-lg-4 mb-4 project-item" data-aos="fade-up">
+          <div class="col-md-6 col-lg-4 mb-4 project-item" data-keywords="Avir YouTube PDFSlides">
             <div class="card h-100">
               <div class="card-body">
                 <h5 class="card-title"><b>YouTube Content Generator from PDF Slides</b></h5>
                 <p class="card-text"><small class="text-muted"><b>Mar 2024 - Oct 2024</b></small></p>
                 <p class="card-text"><strong>Adak Vira Iranian Rahjoo (Avir)</strong></p>
-                <p class="card-text">Automated text-to-speech conversion and video synchronization for slide content using LLMs, supporting multiple languages and voice types. Integrated talking avatars and intro videos for a professional finish.</p>
+                <p class="card-text">Automated text-to-speech conversion, video synchronization for slides, and integrated talking avatars.</p>
               </div>
             </div>
           </div>
-          <!-- Remaining projects hidden by default -->
+          <!-- Remaining projects (hidden by default) -->
           <!-- Project 7 -->
-          <div class="col-md-6 col-lg-4 mb-4 project-item d-none" data-aos="fade-up">
+          <div class="col-md-6 col-lg-4 mb-4 project-item d-none" data-keywords="Avir LLM Assistants">
             <div class="card h-100">
               <div class="card-body">
                 <h5 class="card-title"><b>Customized Persian LLM Assistants and Chatbots</b></h5>
                 <p class="card-text"><small class="text-muted"><b>Apr 2024 - Sep 2024</b></small></p>
                 <p class="card-text"><strong>Adak Vira Iranian Rahjoo (Avir)</strong></p>
-                <p class="card-text">Preprocessing, retrieval-augmented generation (RAG), and fine-tuning of Persian LLM-based assistants and chatbots.</p>
+                <p class="card-text">Developed retrieval-augmented generation (RAG) and fine-tuning for Persian language assistants and chatbots.</p>
               </div>
             </div>
           </div>
           <!-- Project 8 -->
-          <div class="col-md-6 col-lg-4 mb-4 project-item d-none" data-aos="fade-up">
+          <div class="col-md-6 col-lg-4 mb-4 project-item d-none" data-keywords="Avir SalaryVerification">
             <div class="card h-100">
               <div class="card-body">
                 <h5 class="card-title"><b>Salary Verification Tool using LLMs</b></h5>
                 <p class="card-text"><small class="text-muted"><b>Aug 2024</b></small></p>
                 <p class="card-text"><strong>Adak Vira Iranian Rahjoo (Avir)</strong></p>
-                <p class="card-text">Created a tool that extracts financial data from salary documents (PDFs/images) using LLMs, ensuring claimed salary accuracy.</p>
+                <p class="card-text">Extracts financial data from salary documents (PDFs/images) using LLMs for verification.</p>
               </div>
             </div>
           </div>
           <!-- Project 9 -->
-          <div class="col-md-6 col-lg-4 mb-4 project-item d-none" data-aos="fade-up">
+          <div class="col-md-6 col-lg-4 mb-4 project-item d-none" data-keywords="Avir ASR Subtitle">
             <div class="card h-100">
               <div class="card-body">
                 <h5 class="card-title"><b>Video Subtitle Generator using ASR</b></h5>
                 <p class="card-text"><small class="text-muted"><b>Jun 2024 - Jul 2024</b></small></p>
                 <p class="card-text"><strong>Adak Vira Iranian Rahjoo (Avir)</strong></p>
-                <p class="card-text">Automated subtitle generation for video files using our custom ASR model to transcribe speech.</p>
+                <p class="card-text">Automated subtitle generation using a custom ASR model to transcribe video speech.</p>
               </div>
             </div>
           </div>
           <!-- Project 10 -->
-          <div class="col-md-6 col-lg-4 mb-4 project-item d-none" data-aos="fade-up">
+          <div class="col-md-6 col-lg-4 mb-4 project-item d-none" data-keywords="Avir FaceLandmark Audio">
             <div class="card h-100">
               <div class="card-body">
                 <h5 class="card-title"><b>Face Landmark Generation from Audio (SAD-Talker Modification)</b></h5>
                 <p class="card-text"><small class="text-muted"><b>May 2024 - Jun 2024</b></small></p>
                 <p class="card-text"><strong>Adak Vira Iranian Rahjoo (Avir)</strong></p>
-                <p class="card-text">Adapted and modified the SAD-Talker CVPR2024 code to generate facial landmarks from audio input.</p>
+                <p class="card-text">Modified the SAD-Talker code (CVPR2024) to generate facial landmarks from audio.</p>
               </div>
             </div>
           </div>
           <!-- Project 11 -->
-          <div class="col-md-6 col-lg-4 mb-4 project-item d-none" data-aos="fade-up">
+          <div class="col-md-6 col-lg-4 mb-4 project-item d-none" data-keywords="Avir RAG TextParsing">
             <div class="card h-100">
               <div class="card-body">
                 <h5 class="card-title"><b>Text Data Parsing for Retrieval-Augmented Generation (RAG)</b></h5>
                 <p class="card-text"><small class="text-muted"><b>Apr 2024 - Jun 2024</b></small></p>
                 <p class="card-text"><strong>Adak Vira Iranian Rahjoo (Avir)</strong></p>
-                <p class="card-text">Processed and structured text data from books to enable effective input for RAG models.</p>
+                <p class="card-text">Processed and structured text data from books for effective RAG model input.</p>
               </div>
             </div>
           </div>
           <!-- Project 12 -->
-          <div class="col-md-6 col-lg-4 mb-4 project-item d-none" data-aos="fade-up">
+          <div class="col-md-6 col-lg-4 mb-4 project-item d-none" data-keywords="University Mamba Encoder">
             <div class="card h-100">
               <div class="card-body">
                 <h5 class="card-title"><b>Masked Signal Reconstruction with Mamba Encoder</b></h5>
                 <p class="card-text"><small class="text-muted"><b>Mar 2024 - May 2024</b></small></p>
                 <p class="card-text"><strong>University of Tehran</strong></p>
-                <p class="card-text">Implemented a Mamba encoder-based model for reconstructing masked signals in sequence data.</p>
+                <p class="card-text">Developed a Mamba encoder-based model for reconstructing masked signals in sequence data.</p>
               </div>
             </div>
           </div>
           <!-- Project 13 -->
-          <div class="col-md-6 col-lg-4 mb-4 project-item d-none" data-aos="fade-up">
+          <div class="col-md-6 col-lg-4 mb-4 project-item d-none" data-keywords="Avir Diarization Pyannote">
             <div class="card h-100">
               <div class="card-body">
                 <h5 class="card-title"><b>Accurate Diarization using Modified Pyannote-Audio</b></h5>
                 <p class="card-text"><small class="text-muted"><b>Jan 2024 - Feb 2024</b></small></p>
                 <p class="card-text"><strong>Adak Vira Iranian Rahjoo (Avir)</strong></p>
-                <p class="card-text">Developed a complete diarization solution for various cases by modifying the Pyannote-Audio framework.</p>
+                <p class="card-text">Implemented a diarization solution by modifying the Pyannote-Audio framework.</p>
               </div>
             </div>
           </div>
           <!-- Project 14 -->
-          <div class="col-md-6 col-lg-4 mb-4 project-item d-none" data-aos="fade-up">
+          <div class="col-md-6 col-lg-4 mb-4 project-item d-none" data-keywords="Avir Whisper ASR">
             <div class="card h-100">
               <div class="card-body">
                 <h5 class="card-title"><b>Whisper Persian ASR Training on Custom Dataset</b></h5>
                 <p class="card-text"><small class="text-muted"><b>Nov 2023 - Feb 2024</b></small></p>
                 <p class="card-text"><strong>Adak Vira Iranian Rahjoo (Avir)</strong></p>
-                <p class="card-text">Trained and validated the Whisper ASR model on a custom Persian dataset for improved speech recognition accuracy.</p>
+                <p class="card-text">Trained and validated Whisper ASR on a custom Persian dataset for enhanced speech recognition.</p>
               </div>
             </div>
           </div>
           <!-- Project 15 -->
-          <div class="col-md-6 col-lg-4 mb-4 project-item d-none" data-aos="fade-up">
+          <div class="col-md-6 col-lg-4 mb-4 project-item d-none" data-keywords="Avir OCR PDFtoWord">
             <div class="card h-100">
               <div class="card-body">
                 <h5 class="card-title"><b>Persian PDF to Word Converter with Tesseract OCR</b></h5>
                 <p class="card-text"><small class="text-muted"><b>Sep 2023 - Oct 2023</b></small></p>
                 <p class="card-text"><strong>Adak Vira Iranian Rahjoo (Avir)</strong></p>
-                <p class="card-text">Created a module to convert Persian PDF documents to Word format using Tesseract OCR for accurate text extraction.</p>
+                <p class="card-text">Converted Persian PDF documents to Word using Tesseract OCR for accurate text extraction.</p>
               </div>
             </div>
           </div>
           <!-- Project 16 -->
-          <div class="col-md-6 col-lg-4 mb-4 project-item d-none" data-aos="fade-up">
+          <div class="col-md-6 col-lg-4 mb-4 project-item d-none" data-keywords="Avir GAN Cartoonization">
             <div class="card h-100">
               <div class="card-body">
                 <h5 class="card-title"><b>Image and Video Cartoonization using Generative Adversarial Network (GAN)</b></h5>
@@ -565,57 +641,57 @@
             </div>
           </div>
           <!-- Project 17 -->
-          <div class="col-md-6 col-lg-4 mb-4 project-item d-none" data-aos="fade-up">
+          <div class="col-md-6 col-lg-4 mb-4 project-item d-none" data-keywords="Avir LipSync Vowel">
             <div class="card h-100">
               <div class="card-body">
                 <h5 class="card-title"><b>Classic Lip Sync using Vowel Phonetic Detection</b></h5>
                 <p class="card-text"><small class="text-muted"><b>Feb 2023 - Mar 2023</b></small></p>
                 <p class="card-text"><strong>Adak Vira Iranian Rahjoo (Avir)</strong></p>
-                <p class="card-text">Developed a method for distinguishing vowels by analyzing frequency response curves, focusing on formants (F1, F2, F3) for accurate lip-syncing.</p>
+                <p class="card-text">Developed a method for distinguishing vowels using frequency response curves for accurate lip syncing.</p>
               </div>
             </div>
           </div>
           <!-- Project 18 -->
-          <div class="col-md-6 col-lg-4 mb-4 project-item d-none" data-aos="fade-up">
+          <div class="col-md-6 col-lg-4 mb-4 project-item d-none" data-keywords="Avir BrandCampaign">
             <div class="card h-100">
               <div class="card-body">
                 <h5 class="card-title"><b>Brand Campaign Analysis and Reporting</b></h5>
                 <p class="card-text"><small class="text-muted"><b>Aug 2022 - Nov 2022</b></small></p>
                 <p class="card-text"><strong>Adak Vira Iranian Rahjoo (Avir)</strong></p>
-                <p class="card-text">Analyzed social media data and brand campaigns to generate reports, evaluating campaign effectiveness and social media impact.</p>
+                <p class="card-text">Analyzed social media data and brand campaigns to evaluate campaign effectiveness and impact.</p>
               </div>
             </div>
           </div>
           <!-- Project 19 -->
-          <div class="col-md-6 col-lg-4 mb-4 project-item d-none" data-aos="fade-up">
+          <div class="col-md-6 col-lg-4 mb-4 project-item d-none" data-keywords="University OCR Handwritten">
             <div class="card h-100">
               <div class="card-body">
                 <h5 class="card-title"><b>Persian Handwritten and Typewritten OCR</b></h5>
                 <p class="card-text"><small class="text-muted"><b>Jul 2021 - Nov 2022</b></small></p>
                 <p class="card-text"><strong>University of Tehran</strong></p>
-                <p class="card-text">Built and optimized AI engines for OCR, including preprocessing, postprocessing, and dataset management. <br><strong>Supervisor:</strong> Dr. Mohammad Ali Akhaee</p>
+                <p class="card-text">Developed and optimized AI engines for OCR including preprocessing, postprocessing, and dataset management. <br><strong>Supervisor:</strong> Dr. Mohammad Ali Akhaee</p>
               </div>
             </div>
           </div>
           <!-- Project 20 -->
-          <div class="col-md-6 col-lg-4 mb-4 project-item d-none" data-aos="fade-up">
+          <div class="col-md-6 col-lg-4 mb-4 project-item d-none" data-keywords="Avir Audio Similarity">
             <div class="card h-100">
               <div class="card-body">
                 <h5 class="card-title"><b>Text vs. Audio Similarity Checking in Videos</b></h5>
                 <p class="card-text"><small class="text-muted"><b>Oct 2022 - Nov 2022</b></small></p>
                 <p class="card-text"><strong>Adak Vira Iranian Rahjoo (Avir)</strong></p>
-                <p class="card-text">Implemented an ASR module and used Levenshtein distance to check similarity between spoken and written content in videos.</p>
+                <p class="card-text">Implemented an ASR module and used Levenshtein distance to compare spoken and written content in videos.</p>
               </div>
             </div>
           </div>
           <!-- Project 21 -->
-          <div class="col-md-6 col-lg-4 mb-4 project-item d-none" data-aos="fade-up">
+          <div class="col-md-6 col-lg-4 mb-4 project-item d-none" data-keywords="University MATLAB LicensePlate">
             <div class="card h-100">
               <div class="card-body">
                 <h5 class="card-title"><b>Car License Plate Recognition using MATLAB</b></h5>
                 <p class="card-text"><small class="text-muted"><b>Oct 2020 - Jan 2021</b></small></p>
                 <p class="card-text"><strong>Iran University of Science and Technology</strong></p>
-                <p class="card-text">Developed a system for recognizing car license plates using classical image processing techniques in MATLAB.</p>
+                <p class="card-text">Developed a system for recognizing car license plates using classic image processing techniques in MATLAB.</p>
               </div>
             </div>
           </div>
@@ -638,8 +714,8 @@
           <div class="col-lg-12 pt-4 pt-lg-0 content" data-aos="fade-up">
             <div class="row">
               <ul style="list-style: none; padding-left: 0;">
-                <p><i class="bi bi-chevron-right"></i> <strong>[Nov. 2024]</strong> Accepted paper, Multi-Task Framework for hand Images using Mamba at <a href="https://iktconference.ir/2024">IKT'15</a>.</p>
-                <p><i class="bi bi-chevron-right"></i> <strong>[Sep. 2024]</strong> Defend Master thesis at <a href="https://ece.ut.ac.ir/">University of Tehran</a>.</p>
+                <p><i class="bi bi-chevron-right"></i> <strong>[Nov. 2024]</strong> Accepted paper, Multi-Task Framework for Hand Images using Mamba at <a href="https://iktconference.ir/2024">IKT'15</a>.</p>
+                <p><i class="bi bi-chevron-right"></i> <strong>[Sep. 2024]</strong> Defended Master thesis at <a href="https://ece.ut.ac.ir/">University of Tehran</a>.</p>
                 <p><i class="bi bi-chevron-right"></i> <strong>[Aug. 2024]</strong> Accepted paper, <a href="https://arxiv.org/abs/2406.17815" style="color: #cf06cf;">SUM</a> at <a href="https://wacv2025.thecvf.com/">WACV'25</a>.</p>
                 <p><i class="bi bi-chevron-right"></i> <strong>[Jul. 2024]</strong> Preprint Arxiv paper, <a href="https://arxiv.org/abs/2406.17815" style="color: #cf06cf;">SUM</a>.</p>
                 <p><i class="bi bi-chevron-right"></i> <strong>[May. 2024]</strong> Accepted paper, <a href="https://ieeexplore.ieee.org/abstract/document/10533345" style="color: #cf06cf;">Hybrid RAG Approach for LLMs</a> at ICWR'24.</p>
@@ -652,127 +728,113 @@
       </div>
     </section>
 
-  <!-- ======= Hobbies Section ======= -->
-  <section id="hobbies" class="hobbies section-bg">
-    <div class="container" data-aos="fade-up">
-      <div class="section-title text-center">
-        <h2>Hobbies & Leisure Time</h2>
-        <p>When I’m not immersed in research or development, I dedicate my time to activities that inspire creativity, bring relaxation, and keep me energized.</p>
+    <!-- ======= Hobbies Section ======= -->
+    <section id="hobbies" class="hobbies section-bg">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title text-center">
+          <h2>Hobbies & Leisure Time</h2>
+          <p>When I’m not immersed in research or development, I dedicate my time to activities that inspire creativity, bring relaxation, and keep me energized.</p>
+        </div>
+        <div class="row text-center">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="hobby-box p-3 rounded shadow">
+              <h3>📚 Books</h3>
+              <p>Reading books opens up new perspectives and sparks creativity.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="hobby-box p-3 rounded shadow">
+              <h3>🎵 Music & 🎥 Movies</h3>
+              <p>Listening to music and watching movies are great ways for me to relax and enjoy creative storytelling.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="hobby-box p-3 rounded shadow">
+              <h3>🎸 Playing Musical Instruments</h3>
+              <p>Playing the guitar and exploring other instruments helps me connect with my artistic side.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="hobby-box p-3 rounded shadow">
+              <h3>📸 Photography & Nature Adventures</h3>
+              <p>Exploring and capturing the beauty of nature through photography, mountain climbing, hiking, and outdoor adventures.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="hobby-box p-3 rounded shadow">
+              <h3>⚽ Sports & Fitness</h3>
+              <p>Playing football, volleyball, and swimming, watching sports, and staying active with regular workouts keep me energized.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="hobby-box p-3 rounded shadow">
+              <h3>✍️ Writing</h3>
+              <p>I enjoy expressing my thoughts and creativity through writing, exploring literature, and crafting meaningful stories as a writer.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-lg-6 col-md-12 mb-4">
+            <img src="assets/img/hobbies/photography.jpg" alt="Photography Collage" class="img-fluid rounded shadow">
+          </div>
+          <div class="col-lg-6 col-md-12 mb-4">
+            <img src="assets/img/hobbies/mountain.jpg" alt="Nature Adventures Collage" class="img-fluid rounded shadow">
+          </div>
+        </div>
       </div>
-      <div class="row text-center">
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="hobby-box p-3 rounded shadow">
-            <h3>📚 Books</h3>
-            <p>Reading books opens up new perspectives and sparks creativity.</p>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="hobby-box p-3 rounded shadow">
-            <h3>🎵 Music & 🎥 Movies</h3>
-            <p>Listening to music and watching movies are great ways for me to relax and enjoy creative storytelling.</p>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="hobby-box p-3 rounded shadow">
-            <h3>🎸 Playing Musical Instruments</h3>
-            <p>Playing the guitar and exploring other instruments helps me connect with my artistic side.</p>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="hobby-box p-3 rounded shadow">
-            <h3>📸 Photography & Nature Adventures</h3>
-            <p>Exploring and capturing the beauty of nature through photography, mountain climbing, hiking, and outdoor adventures.</p>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="hobby-box p-3 rounded shadow">
-            <h3>⚽ Sports & Fitness</h3>
-            <p>Playing football, volleyball, and swimming, watching sports, and staying active with regular workouts keep me energized.</p>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="hobby-box p-3 rounded shadow">
-            <h3>✍️ Writing</h3>
-            <p>I enjoy expressing my thoughts and creativity through writing, exploring literature, and crafting meaningful stories as a writer.</p>
-          </div>
-        </div>
-      </div>
-      <div class="row mt-5">
-        <div class="col-lg-6 col-md-12 mb-4">
-          <img src="assets/img/hobbies/photography.jpg" alt="Photography Collage" class="img-fluid rounded shadow">
-        </div>
-        <div class="col-lg-6 col-md-12 mb-4">
-          <img src="assets/img/hobbies/mountain.jpg" alt="Nature Adventures Collage" class="img-fluid rounded shadow">
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End Hobbies Section -->
+    </section>
+    <!-- End Hobbies Section -->
 
-  <!-- Add the following CSS for mobile responsiveness -->
-  <style>
-    /* General styles for hobby section */
-    .hobby-box {
-      text-align: center;
-      background-color: #fff;
-      transition: transform 0.3s ease;
-    }
-
-    .hobby-box:hover {
-      transform: translateY(-5px);
-    }
-
-    .hobby-box h3 {
-      font-size: 1.25rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-    }
-
-    .hobby-box p {
-      font-size: 0.95rem;
-      color: #555;
-    }
-
-    /* Media queries for responsiveness */
-    @media (max-width: 768px) {
-      .hobby-box h3 {
-        font-size: 1.1rem;
-      }
-
-      .hobby-box p {
-        font-size: 0.9rem;
-      }
-
+    <!-- Additional CSS for hobby responsiveness is included below in a style tag -->
+    <style>
+      /* General styles for hobby section */
       .hobby-box {
-        padding: 1rem;
+        text-align: center;
+        background-color: #fff;
+        transition: transform 0.3s ease;
       }
-
-      .img-fluid {
-        width: 100%;
-        height: auto;
+      .hobby-box:hover {
+        transform: translateY(-5px);
       }
-    }
-
-    @media (max-width: 576px) {
-      .section-title h2 {
-        font-size: 1.75rem;
-      }
-
-      .section-title p {
-        font-size: 0.9rem;
-      }
-
       .hobby-box h3 {
-        font-size: 1rem;
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
       }
-
       .hobby-box p {
-        font-size: 0.85rem;
+        font-size: 0.95rem;
+        color: #555;
       }
-    }
-  </style>
-
-
+      @media (max-width: 768px) {
+        .hobby-box h3 {
+          font-size: 1.1rem;
+        }
+        .hobby-box p {
+          font-size: 0.9rem;
+        }
+        .hobby-box {
+          padding: 1rem;
+        }
+        .img-fluid {
+          width: 100%;
+          height: auto;
+        }
+      }
+      @media (max-width: 576px) {
+        .section-title h2 {
+          font-size: 1.75rem;
+        }
+        .section-title p {
+          font-size: 0.9rem;
+        }
+        .hobby-box h3 {
+          font-size: 1rem;
+        }
+        .hobby-box p {
+          font-size: 0.85rem;
+        }
+      }
+    </style>
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact section-bg">
@@ -870,6 +932,42 @@
     });
   </script>
 
-</body>
+  <!-- Script for Search & Filter functionality -->
+  <script>
+    // Publications filtering
+    document.getElementById("pub-search").addEventListener("input", filterPublications);
+    document.getElementById("pub-filter").addEventListener("change", filterPublications);
 
+    function filterPublications() {
+      const searchVal = document.getElementById("pub-search").value.toLowerCase();
+      const filterVal = document.getElementById("pub-filter").value.toLowerCase();
+      const pubItems = document.querySelectorAll("#resume .post-item");
+
+      pubItems.forEach(item => {
+        const keywords = item.getAttribute("data-keywords").toLowerCase();
+        const matchesSearch = keywords.indexOf(searchVal) > -1;
+        const matchesFilter = (filterVal === "all") || (keywords.indexOf(filterVal) > -1);
+        item.style.display = (matchesSearch && matchesFilter) ? "block" : "none";
+      });
+    }
+
+    // Projects filtering
+    document.getElementById("proj-search").addEventListener("input", filterProjects);
+    document.getElementById("proj-filter").addEventListener("change", filterProjects);
+
+    function filterProjects() {
+      const searchVal = document.getElementById("proj-search").value.toLowerCase();
+      const filterVal = document.getElementById("proj-filter").value.toLowerCase();
+      const projItems = document.querySelectorAll("#project-grid .project-item");
+
+      projItems.forEach(item => {
+        const keywords = item.getAttribute("data-keywords").toLowerCase();
+        const matchesSearch = keywords.indexOf(searchVal) > -1;
+        const matchesFilter = (filterVal === "all") || (keywords.indexOf(filterVal) > -1);
+        item.style.display = (matchesSearch && matchesFilter) ? "block" : "none";
+      });
+    }
+  </script>
+
+</body>
 </html>
