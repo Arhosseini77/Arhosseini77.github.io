@@ -556,7 +556,7 @@
             <label for="message">Message</label>
             <textarea id="message" name="message" placeholder="Enter Your Message" rows="4" required></textarea>
           </div>
-          <button type="submit" class="btn btn--theme contact__btn">Submit</button>
+          <button type="submit" class="btn contact__btn">Submit</button>
         </form>
       </div>
     </div>
@@ -564,53 +564,89 @@
 </section><!-- End Contact Section -->
 
 <style>
+/* Updated Contact Section Styles */
+.section-bg {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 60px 0;
+}
+
 .contact {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 100%;
-    box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+}
+
+.contact:hover {
+  transform: translateY(-5px);
+}
+
+.section-title h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.section-title p {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 40px;
+  font-size: 18px;
+  color: #666;
 }
 
 .contact__form-field {
-    margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .contact__form-field label {
-    display: block;
-    margin-bottom: 5px;
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
 }
 
 .contact__form-field input,
 .contact__form-field textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  font-size: 16px;
+  color: #333;
 }
 
-.contact__form-field textarea {
-    resize: vertical;
+.contact__form-field input:focus,
+.contact__form-field textarea:focus {
+  border-color: #007BFF;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+  outline: none;
 }
 
-button {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    background-color: #333;
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
+.btn.contact__btn {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 6px;
+  background-color: #007BFF;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-button:hover {
-    background-color: #555;
+.btn.contact__btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
 }
 </style>
-
 
 
   </main><!-- End #main -->
