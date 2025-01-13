@@ -660,37 +660,37 @@
         <p>When I’m not immersed in research or development, I dedicate my time to activities that inspire creativity, bring relaxation, and keep me energized.</p>
       </div>
       <div class="row text-center">
-        <div class="col-lg-4 mb-4">
+        <div class="col-lg-4 col-md-6 mb-4">
           <div class="hobby-box p-3 rounded shadow">
             <h3>📚 Books</h3>
             <p>Reading books opens up new perspectives and sparks creativity.</p>
           </div>
         </div>
-        <div class="col-lg-4 mb-4">
+        <div class="col-lg-4 col-md-6 mb-4">
           <div class="hobby-box p-3 rounded shadow">
             <h3>🎵 Music & 🎥 Movies</h3>
             <p>Listening to music and watching movies are great ways for me to relax and enjoy creative storytelling.</p>
           </div>
         </div>
-        <div class="col-lg-4 mb-4">
+        <div class="col-lg-4 col-md-6 mb-4">
           <div class="hobby-box p-3 rounded shadow">
             <h3>🎸 Playing Musical Instruments</h3>
             <p>Playing the guitar and exploring other instruments helps me connect with my artistic side.</p>
           </div>
         </div>
-        <div class="col-lg-4 mb-4">
+        <div class="col-lg-4 col-md-6 mb-4">
           <div class="hobby-box p-3 rounded shadow">
             <h3>📸 Photography & Nature Adventures</h3>
             <p>Exploring and capturing the beauty of nature through photography, mountain climbing, hiking, and outdoor adventures.</p>
           </div>
         </div>
-        <div class="col-lg-4 mb-4">
+        <div class="col-lg-4 col-md-6 mb-4">
           <div class="hobby-box p-3 rounded shadow">
             <h3>⚽ Sports & Fitness</h3>
             <p>Playing football, volleyball, and swimming, watching sports, and staying active with regular workouts keep me energized.</p>
           </div>
         </div>
-        <div class="col-lg-4 mb-4">
+        <div class="col-lg-4 col-md-6 mb-4">
           <div class="hobby-box p-3 rounded shadow">
             <h3>✍️ Writing</h3>
             <p>I enjoy expressing my thoughts and creativity through writing, exploring literature, and crafting meaningful stories as a writer.</p>
@@ -698,16 +698,79 @@
         </div>
       </div>
       <div class="row mt-5">
-        <div class="col-lg-6 mb-4">
+        <div class="col-lg-6 col-md-12 mb-4">
           <img src="assets/img/hobbies/photography.jpg" alt="Photography Collage" class="img-fluid rounded shadow">
         </div>
-        <div class="col-lg-6 mb-4">
+        <div class="col-lg-6 col-md-12 mb-4">
           <img src="assets/img/hobbies/mountain.jpg" alt="Nature Adventures Collage" class="img-fluid rounded shadow">
         </div>
       </div>
     </div>
   </section>
   <!-- End Hobbies Section -->
+
+  <!-- Add the following CSS for mobile responsiveness -->
+  <style>
+    /* General styles for hobby section */
+    .hobby-box {
+      text-align: center;
+      background-color: #fff;
+      transition: transform 0.3s ease;
+    }
+
+    .hobby-box:hover {
+      transform: translateY(-5px);
+    }
+
+    .hobby-box h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .hobby-box p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    /* Media queries for responsiveness */
+    @media (max-width: 768px) {
+      .hobby-box h3 {
+        font-size: 1.1rem;
+      }
+
+      .hobby-box p {
+        font-size: 0.9rem;
+      }
+
+      .hobby-box {
+        padding: 1rem;
+      }
+
+      .img-fluid {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .section-title h2 {
+        font-size: 1.75rem;
+      }
+
+      .section-title p {
+        font-size: 0.9rem;
+      }
+
+      .hobby-box h3 {
+        font-size: 1rem;
+      }
+
+      .hobby-box p {
+        font-size: 0.85rem;
+      }
+    }
+  </style>
 
 
 
