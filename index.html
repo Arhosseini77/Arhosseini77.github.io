@@ -31,7 +31,6 @@
     body {
       font-family: "Open Sans", sans-serif;
     }
-
     .section-title h2 {
       font-size: 2.5rem;
     }
@@ -79,72 +78,6 @@
         max-height: none;
         margin-top: 20px;
       }
-    }
-
-    /* Timeline Styles */
-    .timeline {
-      position: relative;
-      max-width: 100%;
-      margin: 50px 0;
-    }
-    .timeline::after {
-      content: '';
-      position: absolute;
-      width: 6px;
-      background-color: #007BFF;
-      top: 0;
-      bottom: 0;
-      left: 50%;
-      margin-left: -3px;
-    }
-    .timeline-item {
-      padding: 20px 30px;
-      position: relative;
-      background-color: inherit;
-      width: 50%;
-    }
-    .timeline-item::after {
-      content: "";
-      position: absolute;
-      width: 25px;
-      height: 25px;
-      right: -13px;
-      background-color: white;
-      border: 4px solid #007BFF;
-      top: 15px;
-      border-radius: 50%;
-      z-index: 1;
-    }
-    .timeline-item.left {
-      left: 0;
-    }
-    .timeline-item.right {
-      left: 50%;
-    }
-    .timeline-item.right::after {
-      left: -13px;
-    }
-    .timeline-item h3 {
-      font-size: 1.25rem;
-      margin-bottom: 5px;
-    }
-    .timeline-item p {
-      font-size: 0.95rem;
-      margin-bottom: 0;
-    }
-    @media screen and (max-width: 768px) {
-      .timeline-item {
-        width: 100%;
-        padding-left: 70px;
-        padding-right: 25px;
-      }
-      .timeline-item::after {
-        left: 60px;
-      }
-      .timeline::after {
-        left: 60px;
-      }
-      .timeline-item.right { left: 0%; }
     }
 
     /* Enhanced Contact Section Styles */
@@ -351,7 +284,7 @@
             <option value="arxiv">Arxiv</option>
           </select>
         </div>
-        <!-- Article -7 -->
+        <!-- Publication Articles -->
         <article class="post post-item" data-keywords="conference wacv SUM">
           <ul style="list-style-type: disc; margin-bottom: 3px; padding-left: 0;">
             <li style="font-size: 16px;"><b>SUM: Saliency Unification through Mamba for Visual Attention Modeling</b></li>
@@ -365,7 +298,6 @@
           </div>
         </article>
         <br>
-        <!-- Article -6 -->
         <article class="post post-item" data-keywords="arxiv preprint BrandVisibility">
           <ul style="list-style-type: disc; margin-bottom: 3px; padding-left: 0;">
             <li style="font-size: 16px;"><b>Brand Visibility in Packaging: A Deep Learning Approach for Logo Detection, Saliency-Map Prediction, and Logo Placement Analysis</b></li>
@@ -379,7 +311,6 @@
           </div>
         </article>
         <br>
-        <!-- Article -5 -->
         <article class="post post-item" data-keywords="conference wacv INCODE">
           <ul style="list-style-type: disc; margin-bottom: 3px; padding-left: 0;">
             <li style="font-size: 16px;"><b>INCODE: Implicit Neural Conditioning with Prior Knowledge Embeddings</b></li>
@@ -394,7 +325,6 @@
           </div>
         </article>
         <br>
-        <!-- Article -4 -->
         <article class="post post-item" data-keywords="conference ICWR HybridRAG">
           <ul style="list-style-type: disc; margin-bottom: 3px; padding-left: 0;">
             <li style="font-size: 16px;"><b>Hybrid Retrieval-Augmented Generation Approach for LLMs Query Response Enhancement</b></li>
@@ -406,7 +336,6 @@
           </div>
         </article>
         <br>
-        <!-- Article -3 -->
         <article class="post post-item" data-keywords="conference ICWR CAPTCHA">
           <ul style="list-style-type: disc; margin-bottom: 3px; padding-left: 0;">
             <li style="font-size: 16px;"><b>Farsi CAPTCHA Recognition Using Attention-Based Convolutional Neural Network</b></li>
@@ -418,7 +347,7 @@
           </div>
         </article>
         <br>
-        <!-- Articles -2 and -1 (hidden by default) -->
+        <!-- Hidden Articles (Articles -2 and -1) -->
         <article class="post post-item d-none" data-keywords="journal Automotive">
           <ul style="list-style-type: disc; margin-bottom: 3px; padding-left: 0;">
             <li style="font-size: 16px;"><b>Machine vision–based measurement approach for engine accessory belt transverse vibration based on deep learning method</b></li>
@@ -458,13 +387,13 @@
           <input type="text" id="proj-search" placeholder="Search Projects...">
           <select id="proj-filter">
             <option value="all">All</option>
-            <option value="Avir">Avir</option>
-            <option value="University">University</option>
+            <option value="avir">Avir</option>
+            <option value="university">University</option>
           </select>
         </div>
         <div class="row" id="project-grid">
           <!-- Project 1 -->
-          <div class="col-md-6 col-lg-4 mb-4 project-item" data-keywords="Avir NVILA DocumentQuery">
+          <div class="col-md-6 col-lg-4 mb-4 project-item" data-keywords="avir nvila documentquery dec2024 jan2025">
             <div class="card h-100">
               <div class="card-body">
                 <h5 class="card-title"><b>Document Query using Fine-Tuned Quantized NVILA Model</b></h5>
@@ -475,7 +404,7 @@
             </div>
           </div>
           <!-- Project 2 -->
-          <div class="col-md-6 col-lg-4 mb-4 project-item" data-keywords="Avir SQL Query">
+          <div class="col-md-6 col-lg-4 mb-4 project-item" data-keywords="avir sql query oct2024 dec2024">
             <div class="card h-100">
               <div class="card-body">
                 <h5 class="card-title"><b>AI-Powered Natural Language to SQL Query System</b></h5>
@@ -486,7 +415,7 @@
             </div>
           </div>
           <!-- Project 3 -->
-          <div class="col-md-6 col-lg-4 mb-4 project-item" data-keywords="Avir Diffusion Logo">
+          <div class="col-md-6 col-lg-4 mb-4 project-item" data-keywords="avir diffusion logo aug2024 dec2024">
             <div class="card h-100">
               <div class="card-body">
                 <h5 class="card-title"><b>Logo Generation using Diffusion Models</b></h5>
@@ -497,7 +426,7 @@
             </div>
           </div>
           <!-- Project 4 -->
-          <div class="col-md-6 col-lg-4 mb-4 project-item" data-keywords="Avir EyeTracking Smart-EYE">
+          <div class="col-md-6 col-lg-4 mb-4 project-item" data-keywords="avir eyetracking smart-eye jan2023 nov2024">
             <div class="card h-100">
               <div class="card-body">
                 <h5 class="card-title"><b>Smart-EYE for Ads: AI for Eye Tracking and Brand Attention</b></h5>
@@ -508,7 +437,7 @@
             </div>
           </div>
           <!-- Project 5 -->
-          <div class="col-md-6 col-lg-4 mb-4 project-item" data-keywords="Avir XLSTM Timeseries">
+          <div class="col-md-6 col-lg-4 mb-4 project-item" data-keywords="avir xlstm timeseries sep2024 oct2024">
             <div class="card h-100">
               <div class="card-body">
                 <h5 class="card-title"><b>Time Series Prediction using Modified XLSTM</b></h5>
@@ -519,7 +448,7 @@
             </div>
           </div>
           <!-- Project 6 -->
-          <div class="col-md-6 col-lg-4 mb-4 project-item" data-keywords="Avir YouTube PDFSlides">
+          <div class="col-md-6 col-lg-4 mb-4 project-item" data-keywords="avir youtube pdfslides mar2024 oct2024">
             <div class="card h-100">
               <div class="card-body">
                 <h5 class="card-title"><b>YouTube Content Generator from PDF Slides</b></h5>
@@ -529,9 +458,8 @@
               </div>
             </div>
           </div>
-          <!-- Remaining projects (hidden by default) -->
-          <!-- Project 7 -->
-          <div class="col-md-6 col-lg-4 mb-4 project-item d-none" data-keywords="Avir LLM Assistants">
+          <!-- Project 7 (Hidden by default) -->
+          <div class="col-md-6 col-lg-4 mb-4 project-item d-none" data-keywords="avir llm assistants apr2024 sep2024">
             <div class="card h-100">
               <div class="card-body">
                 <h5 class="card-title"><b>Customized Persian LLM Assistants and Chatbots</b></h5>
@@ -541,8 +469,8 @@
               </div>
             </div>
           </div>
-          <!-- Project 8 -->
-          <div class="col-md-6 col-lg-4 mb-4 project-item d-none" data-keywords="Avir SalaryVerification">
+          <!-- Project 8 (Hidden) -->
+          <div class="col-md-6 col-lg-4 mb-4 project-item d-none" data-keywords="avir salaryverification aug2024">
             <div class="card h-100">
               <div class="card-body">
                 <h5 class="card-title"><b>Salary Verification Tool using LLMs</b></h5>
@@ -552,8 +480,8 @@
               </div>
             </div>
           </div>
-          <!-- Project 9 -->
-          <div class="col-md-6 col-lg-4 mb-4 project-item d-none" data-keywords="Avir ASR Subtitle">
+          <!-- Project 9 (Hidden) -->
+          <div class="col-md-6 col-lg-4 mb-4 project-item d-none" data-keywords="avir asr subtitle jun2024 jul2024">
             <div class="card h-100">
               <div class="card-body">
                 <h5 class="card-title"><b>Video Subtitle Generator using ASR</b></h5>
@@ -563,8 +491,8 @@
               </div>
             </div>
           </div>
-          <!-- Project 10 -->
-          <div class="col-md-6 col-lg-4 mb-4 project-item d-none" data-keywords="Avir FaceLandmark Audio">
+          <!-- Project 10 (Hidden) -->
+          <div class="col-md-6 col-lg-4 mb-4 project-item d-none" data-keywords="avir facelandmark audio may2024 jun2024">
             <div class="card h-100">
               <div class="card-body">
                 <h5 class="card-title"><b>Face Landmark Generation from Audio (SAD-Talker Modification)</b></h5>
@@ -574,8 +502,8 @@
               </div>
             </div>
           </div>
-          <!-- Project 11 -->
-          <div class="col-md-6 col-lg-4 mb-4 project-item d-none" data-keywords="Avir RAG TextParsing">
+          <!-- Project 11 (Hidden) -->
+          <div class="col-md-6 col-lg-4 mb-4 project-item d-none" data-keywords="avir rag textparsing apr2024 jun2024">
             <div class="card h-100">
               <div class="card-body">
                 <h5 class="card-title"><b>Text Data Parsing for Retrieval-Augmented Generation (RAG)</b></h5>
@@ -585,8 +513,8 @@
               </div>
             </div>
           </div>
-          <!-- Project 12 -->
-          <div class="col-md-6 col-lg-4 mb-4 project-item d-none" data-keywords="University Mamba Encoder">
+          <!-- Project 12 (Hidden) -->
+          <div class="col-md-6 col-lg-4 mb-4 project-item d-none" data-keywords="university mamba encoder mar2024 may2024">
             <div class="card h-100">
               <div class="card-body">
                 <h5 class="card-title"><b>Masked Signal Reconstruction with Mamba Encoder</b></h5>
@@ -596,8 +524,8 @@
               </div>
             </div>
           </div>
-          <!-- Project 13 -->
-          <div class="col-md-6 col-lg-4 mb-4 project-item d-none" data-keywords="Avir Diarization Pyannote">
+          <!-- Project 13 (Hidden) -->
+          <div class="col-md-6 col-lg-4 mb-4 project-item d-none" data-keywords="avir diarization pyannote jan2024 feb2024">
             <div class="card h-100">
               <div class="card-body">
                 <h5 class="card-title"><b>Accurate Diarization using Modified Pyannote-Audio</b></h5>
@@ -607,8 +535,8 @@
               </div>
             </div>
           </div>
-          <!-- Project 14 -->
-          <div class="col-md-6 col-lg-4 mb-4 project-item d-none" data-keywords="Avir Whisper ASR">
+          <!-- Project 14 (Hidden) -->
+          <div class="col-md-6 col-lg-4 mb-4 project-item d-none" data-keywords="avir whisper asr nov2023 feb2024">
             <div class="card h-100">
               <div class="card-body">
                 <h5 class="card-title"><b>Whisper Persian ASR Training on Custom Dataset</b></h5>
@@ -618,8 +546,8 @@
               </div>
             </div>
           </div>
-          <!-- Project 15 -->
-          <div class="col-md-6 col-lg-4 mb-4 project-item d-none" data-keywords="Avir OCR PDFtoWord">
+          <!-- Project 15 (Hidden) -->
+          <div class="col-md-6 col-lg-4 mb-4 project-item d-none" data-keywords="avir ocr pdftoword sep2023 oct2023">
             <div class="card h-100">
               <div class="card-body">
                 <h5 class="card-title"><b>Persian PDF to Word Converter with Tesseract OCR</b></h5>
@@ -629,8 +557,8 @@
               </div>
             </div>
           </div>
-          <!-- Project 16 -->
-          <div class="col-md-6 col-lg-4 mb-4 project-item d-none" data-keywords="Avir GAN Cartoonization">
+          <!-- Project 16 (Hidden) -->
+          <div class="col-md-6 col-lg-4 mb-4 project-item d-none" data-keywords="avir gan cartoonization dec2022 may2023">
             <div class="card h-100">
               <div class="card-body">
                 <h5 class="card-title"><b>Image and Video Cartoonization using Generative Adversarial Network (GAN)</b></h5>
@@ -640,8 +568,8 @@
               </div>
             </div>
           </div>
-          <!-- Project 17 -->
-          <div class="col-md-6 col-lg-4 mb-4 project-item d-none" data-keywords="Avir LipSync Vowel">
+          <!-- Project 17 (Hidden) -->
+          <div class="col-md-6 col-lg-4 mb-4 project-item d-none" data-keywords="avir lipsync vowel feb2023 mar2023">
             <div class="card h-100">
               <div class="card-body">
                 <h5 class="card-title"><b>Classic Lip Sync using Vowel Phonetic Detection</b></h5>
@@ -651,8 +579,8 @@
               </div>
             </div>
           </div>
-          <!-- Project 18 -->
-          <div class="col-md-6 col-lg-4 mb-4 project-item d-none" data-keywords="Avir BrandCampaign">
+          <!-- Project 18 (Hidden) -->
+          <div class="col-md-6 col-lg-4 mb-4 project-item d-none" data-keywords="avir brandcampaign aug2022 nov2022">
             <div class="card h-100">
               <div class="card-body">
                 <h5 class="card-title"><b>Brand Campaign Analysis and Reporting</b></h5>
@@ -662,8 +590,8 @@
               </div>
             </div>
           </div>
-          <!-- Project 19 -->
-          <div class="col-md-6 col-lg-4 mb-4 project-item d-none" data-keywords="University OCR Handwritten">
+          <!-- Project 19 (Hidden) -->
+          <div class="col-md-6 col-lg-4 mb-4 project-item d-none" data-keywords="university ocr handwritten jul2021 nov2022">
             <div class="card h-100">
               <div class="card-body">
                 <h5 class="card-title"><b>Persian Handwritten and Typewritten OCR</b></h5>
@@ -673,8 +601,8 @@
               </div>
             </div>
           </div>
-          <!-- Project 20 -->
-          <div class="col-md-6 col-lg-4 mb-4 project-item d-none" data-keywords="Avir Audio Similarity">
+          <!-- Project 20 (Hidden) -->
+          <div class="col-md-6 col-lg-4 mb-4 project-item d-none" data-keywords="avir audiosimilarity oct2022 nov2022">
             <div class="card h-100">
               <div class="card-body">
                 <h5 class="card-title"><b>Text vs. Audio Similarity Checking in Videos</b></h5>
@@ -684,8 +612,8 @@
               </div>
             </div>
           </div>
-          <!-- Project 21 -->
-          <div class="col-md-6 col-lg-4 mb-4 project-item d-none" data-keywords="University MATLAB LicensePlate">
+          <!-- Project 21 (Hidden) -->
+          <div class="col-md-6 col-lg-4 mb-4 project-item d-none" data-keywords="university matlab licenseplate oct2020 jan2021">
             <div class="card h-100">
               <div class="card-body">
                 <h5 class="card-title"><b>Car License Plate Recognition using MATLAB</b></h5>
@@ -785,7 +713,7 @@
     </section>
     <!-- End Hobbies Section -->
 
-    <!-- Additional CSS for hobby responsiveness is included below in a style tag -->
+    <!-- Additional CSS for hobby responsiveness -->
     <style>
       /* General styles for hobby section */
       .hobby-box {
@@ -912,7 +840,7 @@
 
   <!-- Script to toggle visibility of hidden publications -->
   <script>
-    document.getElementById('pub-show-more-btn').addEventListener('click', function () {
+    document.getElementById('pub-show-more-btn') && document.getElementById('pub-show-more-btn').addEventListener('click', function () {
       const hiddenPosts = document.querySelectorAll('.post-item.d-none');
       hiddenPosts.forEach(item => {
         item.classList.remove('d-none');
@@ -923,7 +851,7 @@
 
   <!-- Script to toggle visibility of hidden projects -->
   <script>
-    document.getElementById('load-more-btn').addEventListener('click', function () {
+    document.getElementById('load-more-btn') && document.getElementById('load-more-btn').addEventListener('click', function () {
       const hiddenItems = document.querySelectorAll('.project-item.d-none');
       hiddenItems.forEach(item => {
         item.classList.remove('d-none');
@@ -934,37 +862,47 @@
 
   <!-- Script for Search & Filter functionality -->
   <script>
+    // Helper: Check if an element's inner text or data-keywords contains the search value
+    function matchesSearch(item, searchVal) {
+      // Get inner text and data-keywords (both lowercased)
+      const text = item.innerText.toLowerCase();
+      const keywords = item.getAttribute("data-keywords").toLowerCase();
+      return text.indexOf(searchVal) > -1 || keywords.indexOf(searchVal) > -1;
+    }
+
     // Publications filtering
     document.getElementById("pub-search").addEventListener("input", filterPublications);
     document.getElementById("pub-filter").addEventListener("change", filterPublications);
-
     function filterPublications() {
       const searchVal = document.getElementById("pub-search").value.toLowerCase();
       const filterVal = document.getElementById("pub-filter").value.toLowerCase();
       const pubItems = document.querySelectorAll("#resume .post-item");
 
       pubItems.forEach(item => {
-        const keywords = item.getAttribute("data-keywords").toLowerCase();
-        const matchesSearch = keywords.indexOf(searchVal) > -1;
-        const matchesFilter = (filterVal === "all") || (keywords.indexOf(filterVal) > -1);
-        item.style.display = (matchesSearch && matchesFilter) ? "block" : "none";
+        // Check if inner text or keywords match the search term
+        const matchesSearchTerm = searchVal === "" || matchesSearch(item, searchVal);
+        // Check if the item matches the selected filter ("all" shows all items)
+        const itemKeywords = item.getAttribute("data-keywords").toLowerCase();
+        const matchesFilter = filterVal === "all" || itemKeywords.indexOf(filterVal) > -1;
+
+        // Set display to block if both conditions are met, otherwise hide the element.
+        item.style.display = (matchesSearchTerm && matchesFilter) ? "block" : "none";
       });
     }
 
     // Projects filtering
     document.getElementById("proj-search").addEventListener("input", filterProjects);
     document.getElementById("proj-filter").addEventListener("change", filterProjects);
-
     function filterProjects() {
       const searchVal = document.getElementById("proj-search").value.toLowerCase();
       const filterVal = document.getElementById("proj-filter").value.toLowerCase();
       const projItems = document.querySelectorAll("#project-grid .project-item");
 
       projItems.forEach(item => {
-        const keywords = item.getAttribute("data-keywords").toLowerCase();
-        const matchesSearch = keywords.indexOf(searchVal) > -1;
-        const matchesFilter = (filterVal === "all") || (keywords.indexOf(filterVal) > -1);
-        item.style.display = (matchesSearch && matchesFilter) ? "block" : "none";
+        const matchesSearchTerm = searchVal === "" || matchesSearch(item, searchVal);
+        const itemKeywords = item.getAttribute("data-keywords").toLowerCase();
+        const matchesFilter = filterVal === "all" || itemKeywords.indexOf(filterVal) > -1;
+        item.style.display = (matchesSearchTerm && matchesFilter) ? "block" : "none";
       });
     }
   </script>
