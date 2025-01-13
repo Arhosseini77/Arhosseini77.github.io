@@ -386,8 +386,6 @@
         <!-- Search and Filter Controls for Projects -->
         <div class="filter-controls text-center">
           <input type="text" id="proj-title" placeholder="Search by Title...">
-          Start Date: <input type="month" id="proj-start">
-          End Date: <input type="month" id="proj-end">
         </div>
         <div class="row" id="project-grid">
           <!-- Project 1 -->
@@ -890,42 +888,19 @@
     }
   </script>
 
-  <!-- Script for Project Search & Date Filter functionality -->
+  <!-- Script for Project Search functionality (date filtering removed) -->
   <script>
-    // Project filtering:
-    // Filter by Title (search within the h5.card-title) and filter by date range.
+    // Project filtering based solely on Title.
     document.getElementById("proj-title").addEventListener("input", filterProjects);
-    document.getElementById("proj-start").addEventListener("change", filterProjects);
-    document.getElementById("proj-end").addEventListener("change", filterProjects);
 
     function filterProjects() {
       const titleVal = document.getElementById("proj-title").value.toLowerCase();
-      // Get month/year values in format YYYY-MM. If empty, treat as open range.
-      const startVal = document.getElementById("proj-start").value;
-      const endVal = document.getElementById("proj-end").value;
-
       const projItems = document.querySelectorAll("#project-grid .project-item");
 
       projItems.forEach(item => {
-        // Get title from h5 in card-title.
         const projTitle = item.querySelector("h5.card-title").innerText.toLowerCase();
         const matchTitle = titleVal === "" || projTitle.indexOf(titleVal) > -1;
-
-        // Get project start and end dates from data attributes.
-        const projStart = item.getAttribute("data-date-start"); // e.g., "2024-12"
-        const projEnd = item.getAttribute("data-date-end");       // e.g., "2025-01"
-        let matchDate = true; // default is true
-
-        // If a start date filter is set, check that project's end date is after or equal
-        if(startVal) {
-          matchDate = matchDate && (projEnd >= startVal);
-        }
-        // If an end date filter is set, check that project's start date is before or equal
-        if(endVal) {
-          matchDate = matchDate && (projStart <= endVal);
-        }
-
-        item.style.display = (matchTitle && matchDate) ? "block" : "none";
+        item.style.display = matchTitle ? "block" : "none";
       });
     }
   </script>
