@@ -229,61 +229,71 @@
           <!-- Education Section -->
           <div class="education mb-4">
             <h3 class="mb-3">Education</h3>
-            <div class="row">
-              <div class="col-8">
-                <ul class="list-unstyled mb-0">
-                  <li>
-                    <i class="bi bi-chevron-right"></i>
-                    <strong class="institution">Master's in Telecommunication Systems</strong>
-                    <br>
-                    <span class="subtext">University of Tehran</span>
-                  </li>
-                  <li class="mt-3">
-                    <i class="bi bi-chevron-right"></i>
-                    <strong class="institution">Bachelor's in Electrical Engineering</strong>
-                    <br>
-                    <span class="subtext">Iran University of Science and Technology</span>
-                  </li>
-                </ul>
+            <div class="row mb-3">
+              <div class="col-9">
+                <p>
+                  <i class="bi bi-chevron-right"></i>
+                  <strong class="institution">Master's in Telecommunication Systems</strong>
+                  <br>
+                  <span class="subtext">University of Tehran</span>
+                </p>
               </div>
-              <div class="col-4 text-end date-col">
-                <ul class="list-unstyled mb-0">
-                  <li>Sep. 2022 - Sep. 2024</li>
-                  <li class="mt-4">Sep. 2017 - Mar. 2022</li>
-                </ul>
+              <div class="col-3 text-end">
+                <p class="date">Sep. 2022 - Sep. 2024</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-9">
+                <p>
+                  <i class="bi bi-chevron-right"></i>
+                  <strong class="institution">Bachelor's in Electrical Engineering</strong>
+                  <br>
+                  <span class="subtext">Iran University of Science and Technology</span>
+                </p>
+              </div>
+              <div class="col-3 text-end">
+                <p class="date">Sep. 2017 - Mar. 2022</p>
               </div>
             </div>
           </div>
           <!-- Experience Section -->
           <div class="experience">
             <h3 class="mb-3">Experience</h3>
-            <div class="row">
-              <div class="col-8">
-                <ul class="list-unstyled mb-0">
-                  <li>
-                    <i class="bi bi-chevron-right"></i>
-                    <strong class="institution">AI Developer</strong>, <span class="subtext company">AVIR AI Center</span>
-                    <br>
-                    <small class="location">Tehran, Iran</small>
-                  </li>
-                  <li class="mt-3">
-                    <i class="bi bi-chevron-right"></i>
-                    <strong class="institution">AI Developer</strong>, <span class="subtext company">University of Tehran</span>
-                  </li>
-                  <li class="mt-3">
-                    <i class="bi bi-chevron-right"></i>
-                    <strong class="institution">AI Developer</strong>, <span class="subtext company">Irankhodro Powertrain Co</span>
-                    <br>
-                    <small class="location">Tehran, Iran</small>
-                  </li>
-                </ul>
+            <div class="row mb-3">
+              <div class="col-9">
+                <p>
+                  <i class="bi bi-chevron-right"></i>
+                  <strong class="institution">AI Developer</strong>, <span class="company">AVIR AI Center</span>
+                  <br>
+                  <small class="location">Tehran, Iran</small>
+                </p>
               </div>
-              <div class="col-4 text-end date-col">
-                <ul class="list-unstyled mb-0">
-                  <li>Jul. 2022 - Present</li>
-                  <li class="mt-4">Jan. 2023 - Nov. 2023</li>
-                  <li class="mt-4">Jul. 2021 - Jul. 2022</li>
-                </ul>
+              <div class="col-3 text-end">
+                <p class="date">Jul. 2022 - Present</p>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-9">
+                <p>
+                  <i class="bi bi-chevron-right"></i>
+                  <strong class="institution">AI Developer</strong>, <span class="company">University of Tehran</span>
+                </p>
+              </div>
+              <div class="col-3 text-end">
+                <p class="date">Jan. 2023 - Nov. 2023</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-9">
+                <p>
+                  <i class="bi bi-chevron-right"></i>
+                  <strong class="institution">AI Developer</strong>, <span class="company">Irankhodro Powertrain Co</span>
+                  <br>
+                  <small class="location">Tehran, Iran</small>
+                </p>
+              </div>
+              <div class="col-3 text-end">
+                <p class="date">Jul. 2021 - Jul. 2022</p>
               </div>
             </div>
           </div>
@@ -334,25 +344,17 @@
     font-size: 0.9rem;
     color: #777;
   }
-  #about ul {
-    padding-left: 0;
-  }
-  #about ul li {
-    line-height: 1.6;
-    font-size: 1rem;
-  }
-  #about ul li i {
-    color: #007BFF;
-    margin-right: 5px;
-  }
-  .date-col ul li {
+  #about .date {
     font-size: 0.95rem;
     color: #555;
+    margin-top: 10px;
   }
   @media (max-width: 767.98px) {
-    .date-col {
+    #about .text-end {
       text-align: left !important;
-      margin-top: 10px;
+    }
+    #about .date {
+      text-align: left;
     }
   }
 </style>
